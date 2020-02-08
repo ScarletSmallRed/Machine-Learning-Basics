@@ -22,7 +22,7 @@ class LogisticRegression:
             try:
                 return - np.sum(y*np.log(y_hat) + (1-y)*np.log(1-y_hat)) / len(y)
             except:
-                return float('inf')
+                return float('inf') 
 
         def dJ(theta, X_b, y):
             return X_b.T.dot(self._sigmoid(X_b.dot(theta)) - y) / len(y)
